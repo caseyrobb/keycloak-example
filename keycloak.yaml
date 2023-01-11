@@ -1,0 +1,14 @@
+apiVersion: keycloak.org/v1alpha1
+kind: Keycloak
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+  labels:
+    app: sso
+  name: sso
+  namespace: sso
+spec:
+  externalAccess:
+    enabled: true
+  instances: 1
+  profile: RHSSO

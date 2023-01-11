@@ -1,0 +1,21 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: openshift-client
+  labels:
+    app: sso
+spec:
+  realmSelector:
+    matchLabels:
+      app: openshift
+  client:
+    clientId: openshift
+    realm": "openshift"
+    secret: 78cf5cf0-91df-11ed-a1eb-0242ac120002
+    clientAuthenticatorType: client-secret
+    consentRequired: false
+    standardFlowEnabled: true
+    implicitFlowEnabled: false
+    directAccessGrantsEnabled: true
+    redirectUris:
+      - "https://keycloak.example.com/auth/realms/master/protocol/openid-connect/token"
