@@ -10,7 +10,7 @@ spec:
       app: openshift
   client:
     clientId: openshift
-    realm": "openshift"
+    realm: "openshift"
     secret: 78cf5cf0-91df-11ed-a1eb-0242ac120002
     clientAuthenticatorType: client-secret
     consentRequired: false
