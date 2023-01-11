@@ -10,8 +10,6 @@ spec:
     matchLabels:
       app: sso
   user:
-    groups:
-      - cluster-admins
     credentials:
       - temporary: true
         type: password
