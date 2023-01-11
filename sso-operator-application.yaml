@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rhsso-operator
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: rhsso/operator/overlays/stable
+    repoURL: 'https://github.com/caseyrobb/gitops-catalog.git'
+    targetRevision: rhsso-stable

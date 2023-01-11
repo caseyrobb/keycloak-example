@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sso-config
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: sso
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: .
+    repoURL: 'https://github.com/caseyrobb/keycloak-example'
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - RespectIgnoreDifferences=true
+      - ServerSideApply=true
