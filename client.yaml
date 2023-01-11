@@ -9,6 +9,7 @@ spec:
     matchLabels:
       app: sso
   client:
+    name: openshift
     clientId: openshift
     secret: 78cf5cf0-91df-11ed-a1eb-0242ac120002
     clientAuthenticatorType: client-secret
