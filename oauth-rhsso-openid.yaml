@@ -24,12 +24,8 @@ spec:
         claims:
           preferredUsername:
             - preferred_username
-            - email
           name:
-            - nickname
-            - given_name
             - name
           email:
-            - custom_email_claim
             - email
         issuer: https://keycloak.example.com/auth/realms/openshift
