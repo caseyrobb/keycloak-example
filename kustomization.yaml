@@ -6,6 +6,7 @@ resources:
 - keycloak.yaml
 - realm.yaml
 - client.yaml
+- crobb-user.yaml
 - oauth-rhsso-openid.yaml
 
 patchesJson6902:

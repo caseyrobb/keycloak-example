@@ -1,0 +1,24 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: crobb-user
+  labels:
+    app: sso
+  namespace: sso
+spec:
+  realmSelector:
+    matchLabels:
+      app: sso
+  user:
+    groups:
+      - cluster-admins
+    credentials:
+      - temporary: true
+        type: password
+        value: p4ssw0rd
+    username: crobb
+    firstName: Casey
+    lastName: Robb
+    email: casey.robb@redhat.com
+    enabled: true
+    emailVerified: true
